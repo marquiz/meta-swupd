@@ -3,7 +3,7 @@ HOMEPAGE = "https://github.com/clearlinux/swupd-client"
 LICENSE = "GPL-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=f8d90fb802930e30e49c39c8126a959e"
 
-DEPENDS = "glib-2.0 curl openssl libarchive bsdiff"
+DEPENDS = "glib-2.0 curl openssl libarchive bsdiff python3-docutils-native"
 
 PV = "3.12.0"
 SRC_URI = "git://github.com/clearlinux/swupd-client.git;protocol=https \
@@ -31,7 +31,7 @@ RRECOMMENDS_${PN}_class-target = "os-release"
 SWUPD_CLIENT_FORMAT = "4"
 RPROVIDES_${PN} = "swupd-client-format${SWUPD_CLIENT_FORMAT}"
 
-inherit pkgconfig autotools systemd distro_features_check
+inherit pkgconfig autotools systemd distro_features_check python3native
 
 REQUIRED_DISTRO_FEATURES_class-target = "systemd"
 
